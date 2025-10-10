@@ -16,7 +16,6 @@ const NAV_ITEMS: NavItem[] = [
     label: 'Dienstleistungen',
     children: [
       { href: '/dienstleistungen#angebot', label: 'Angebot' },
-      { href: '/dienstleistungen#angehoerigenpflege', label: 'Angehörigenpflege' },
       { href: '/dienstleistungen#einsatzgebiet', label: 'Einsatzgebiet' },
       { href: '/dienstleistungen#tarife', label: 'Tarife' },
     ],
@@ -36,7 +35,9 @@ const NAV_ITEMS: NavItem[] = [
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [mobileSubOpen, setMobileSubOpen] = useState<Record<string, boolean>>({})
+  const [mobileSubOpen, setMobileSubOpen] = useState<Record<string, boolean>>(
+    {}
+  )
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -148,7 +149,10 @@ export function Header() {
                     type="button"
                     aria-expanded={!!mobileSubOpen[item.href]}
                     onClick={() =>
-                      setMobileSubOpen((s) => ({ ...s, [item.href]: !s[item.href] }))
+                      setMobileSubOpen((s) => ({
+                        ...s,
+                        [item.href]: !s[item.href],
+                      }))
                     }
                     className="flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-base font-medium text-foreground hover:bg-accent hover:text-accent-foreground"
                   >

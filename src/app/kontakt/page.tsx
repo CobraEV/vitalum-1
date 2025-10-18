@@ -1,50 +1,23 @@
-'use client'
-
-import { motion, Variants } from 'framer-motion'
+import ContactForm from '@/components/ContactForm'
+import { Globe, Mail, MapPin, Phone } from 'lucide-react'
 import Link from 'next/link'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { Button } from '@/components/ui/button'
-import { Mail, Phone, MapPin, Globe } from 'lucide-react'
-
-const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: (i = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, delay: i * 0.1, ease: 'easeOut' },
-  }),
-}
 
 export default function KontaktPage() {
   return (
-    <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-24">
+    <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-8">
       {/* 💚 Header */}
       <section className="text-center space-y-4">
-        <motion.h1
-          className="text-4xl font-bold text-primary sm:text-5xl"
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          Kontakt
-        </motion.h1>
-        <motion.p
-          className="max-w-2xl mx-auto text-muted-foreground leading-relaxed"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.1 }}
-          viewport={{ once: true }}
-        >
+        <h1 className="text-4xl font-bold text-primary sm:text-5xl">Kontakt</h1>
+        <p className="max-w-2xl mx-auto text-muted-foreground leading-relaxed">
           Sie möchten mehr über unsere Dienstleistungen erfahren oder einen
           Termin vereinbaren? Wir sind gerne für Sie da – telefonisch, per
           E-Mail oder direkt über das Formular.
-        </motion.p>
+        </p>
       </section>
 
       {/* ✨ Kontaktbereich */}
       <section className="relative rounded-[2rem] border border-border bg-gradient-to-br from-[#e8f7f4] via-background to-[#f7fbfa] shadow-[inset_0_2px_20px_-5px_rgba(76,195,170,0.15)] p-8 sm:p-12">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 items-start">
           {/* 📞 Kontaktinformationen */}
           <div className="space-y-8">
             <h2 className="text-2xl font-semibold text-primary">
@@ -82,15 +55,7 @@ export default function KontaktPage() {
                   href: 'https://maps.google.com/?q=Postweg+18,+8754+Netstal',
                 },
               ].map((item, i) => (
-                <motion.div
-                  key={i}
-                  variants={fadeUp}
-                  initial="hidden"
-                  whileInView="visible"
-                  custom={i}
-                  viewport={{ once: true }}
-                  className="flex items-start gap-4"
-                >
+                <div key={i} className="flex items-start gap-4">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 shrink-0">
                     {item.icon}
                   </div>
@@ -105,40 +70,19 @@ export default function KontaktPage() {
                       {item.value}
                     </Link>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
 
           {/* 💌 Kontaktformular */}
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="rounded-2xl bg-white/70 backdrop-blur-sm border border-border shadow-sm p-6 sm:p-8"
-          >
+          <div className="rounded-2xl bg-white/70 backdrop-blur-sm border border-border shadow-sm p-6 sm:p-8">
             <h2 className="text-2xl font-semibold text-primary mb-6 text-center">
               Schreiben Sie uns
             </h2>
 
-            <form className="grid gap-5" onSubmit={(e) => e.preventDefault()}>
-              <div className="grid sm:grid-cols-2 gap-4">
-                <Input placeholder="Vorname" required />
-                <Input placeholder="Nachname" required />
-              </div>
-              <div className="grid sm:grid-cols-2 gap-4">
-                <Input type="email" placeholder="E-Mail" required />
-                <Input type="tel" placeholder="Telefonnummer" />
-              </div>
-              <Textarea placeholder="Ihre Nachricht" rows={5} required />
-              <div className="text-center">
-                <Button type="submit" className="px-8">
-                  Nachricht senden
-                </Button>
-              </div>
-            </form>
-          </motion.div>
+            <ContactForm />
+          </div>
         </div>
       </section>
     </main>

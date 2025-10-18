@@ -1,7 +1,4 @@
-'use client'
-
 import { Button } from '@/components/ui/button'
-import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -66,14 +63,8 @@ export default function ServicesSection() {
         </div>
 
         <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((item, idx) => (
-            <motion.li
-              key={item.label}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.45, delay: 0.04 * idx }}
-              viewport={{ once: true }}
-            >
+          {services.map((item) => (
+            <li key={item.label}>
               <div className="group rounded-xl border border-border bg-card p-5 shadow-sm transition-all hover:border-primary/40 hover:shadow-md">
                 <Link href={item.href} className="flex items-start gap-4">
                   <span className="relative inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full">
@@ -89,7 +80,7 @@ export default function ServicesSection() {
                   </div>
                 </Link>
               </div>
-            </motion.li>
+            </li>
           ))}
         </ul>
 

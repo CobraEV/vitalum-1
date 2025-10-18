@@ -1,21 +1,12 @@
-'use client'
-
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { motion } from 'framer-motion'
 import { Phone } from 'lucide-react'
 
 export default function ContactCTA() {
   return (
     <section className="relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <motion.div
-          className="rounded-3xl border border-primary/15 bg-primary text-primary-foreground p-8 sm:p-12 text-center shadow-sm"
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
-          viewport={{ once: true }}
-        >
+        <div className="rounded-3xl border border-primary/15 bg-primary text-primary-foreground p-8 sm:p-12 text-center shadow-sm">
           <div className="mx-auto mb-4 flex size-12 items-center justify-center rounded-full bg-primary-foreground/10 ring-1 ring-inset ring-primary-foreground/20">
             <Phone className="size-6 text-primary-foreground" />
           </div>
@@ -38,7 +29,7 @@ export default function ContactCTA() {
               <a href="tel:+41555119393">Jetzt anrufen</a>
             </Button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

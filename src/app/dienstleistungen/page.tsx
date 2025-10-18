@@ -1,7 +1,4 @@
-'use client'
-
 import { cn } from '@/lib/utils'
-import { motion, Variants } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -44,52 +41,27 @@ const SERVICES = [
   },
 ]
 
-const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: (custom: number = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, delay: custom * 0.1, ease: 'easeOut' },
-  }),
-}
-
 export default function DienstleistungenPage() {
   return (
     <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
       {/* 🩺 Header */}
       <section className="text-center space-y-4">
-        <motion.h1
-          className="text-4xl font-bold tracking-tight text-primary sm:text-5xl"
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
+        <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-5xl">
           Unsere Dienstleistungen
-        </motion.h1>
-        <motion.p
-          className="max-w-2xl mx-auto text-muted-foreground"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.1 }}
-          viewport={{ once: true }}
-        >
+        </h1>
+        <p className="max-w-2xl mx-auto text-muted-foreground">
           Mit Herz, Kompetenz und Nähe – wir unterstützen Sie und Ihre
           Angehörigen in allen Lebenslagen. Unser Ziel ist Ihr Wohlbefinden zu
           Hause.
-        </motion.p>
+        </p>
       </section>
 
       {/* 💚 Services */}
       <section id="angebot" className="space-y-8">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((s, i) => (
-            <motion.div
+          {SERVICES.map((s) => (
+            <div
               key={s.id}
-              variants={fadeUp}
-              initial={false}
-              whileInView="visible"
-              custom={i}
-              viewport={{ once: true }}
               className={cn(
                 'rounded-2xl border border-border bg-card/60 backdrop-blur-sm p-6 shadow-sm hover:shadow-md transition-all duration-300',
                 'hover:-translate-y-1 hover:bg-card'
@@ -112,7 +84,7 @@ export default function DienstleistungenPage() {
                   {s.text}
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </section>
@@ -122,33 +94,18 @@ export default function DienstleistungenPage() {
         id="einsatzgebiet"
         className="scroll-mt-24 space-y-6 text-center"
       >
-        <motion.h2
-          className="text-3xl font-semibold text-primary"
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
+        <h2 className="text-3xl font-semibold text-primary">
           Unser Einsatzgebiet
-        </motion.h2>
-        <motion.p
-          className="max-w-2xl mx-auto text-muted-foreground"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-        >
+        </h2>
+        <p className="max-w-2xl mx-auto text-muted-foreground">
           Wir sind im gesamten{' '}
           <span className="text-secondary font-semibold">
             Kanton St. Gallen
           </span>{' '}
           für Sie unterwegs. Ob Stadt oder Land – unser Team kommt zuverlässig
           zu Ihnen nach Hause.
-        </motion.p>
-        <motion.div
-          className="relative mx-auto rounded-2xl overflow-hidden border border-border shadow-sm"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-        >
+        </p>
+        <div className="relative mx-auto rounded-2xl overflow-hidden border border-border shadow-sm">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d346955.72254295053!2d8.991083518745597!3d47.20500592092091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ac3248b0a10a1%3A0xbae7aba15ca8dea!2sSt.%20Gallen!5e0!3m2!1sde!2sch!4v1760123427209!5m2!1sde!2sch"
             width="100%"
@@ -158,7 +115,7 @@ export default function DienstleistungenPage() {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
-        </motion.div>
+        </div>
       </section>
 
       {/* 💰 Tarife */}
@@ -169,34 +126,17 @@ export default function DienstleistungenPage() {
         {/* Glanz / Licht */}
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(76,195,170,0.15)_0%,transparent_70%)]" />
 
-        <motion.h2
-          className="relative z-10 text-4xl font-bold text-primary text-center tracking-tight"
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
+        <h2 className="relative z-10 text-4xl font-bold text-primary text-center tracking-tight">
           Tarife & Kosten
-        </motion.h2>
+        </h2>
 
-        <motion.p
-          className="relative z-10 mx-auto mt-4 max-w-2xl text-center text-muted-foreground leading-relaxed"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.1 }}
-          viewport={{ once: true }}
-        >
+        <p className="relative z-10 mx-auto mt-4 max-w-2xl text-center text-muted-foreground leading-relaxed">
           Wir glauben an Klarheit und Vertrauen. Unsere Tarife sind fair,
           nachvollziehbar und orientieren sich an den Richtlinien des{' '}
           <strong>Kantons St. Gallen</strong> sowie der Krankenkassen.
-        </motion.p>
+        </p>
 
-        <motion.div
-          className="relative z-10 mx-auto mt-12 grid max-w-3xl gap-8 sm:grid-cols-3 text-left"
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div className="relative z-10 mx-auto mt-12 grid max-w-3xl gap-8 sm:grid-cols-3 text-left">
           {/* Punkt 1 */}
           <div className="flex flex-col items-start space-y-3 sm:items-center sm:text-center">
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
@@ -254,15 +194,10 @@ export default function DienstleistungenPage() {
               Kostenübersicht – abgestimmt auf Ihre Situation.
             </p>
           </div>
-        </motion.div>
+        </div>
 
         {/* CTA */}
-        <motion.div
-          className="relative z-10 mt-14 flex justify-center"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-        >
+        <div className="relative z-10 mt-14 flex justify-center">
           <Link
             href="/kontakt"
             className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-primary px-10 py-4 text-white font-medium shadow-md transition-all hover:shadow-lg hover:bg-primary/90"
@@ -272,10 +207,10 @@ export default function DienstleistungenPage() {
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-primary/70 to-secondary/70 opacity-0 group-hover:opacity-100 transition-opacity" />
           </Link>
-        </motion.div>
+        </div>
 
         {/* Sanfter Lichtschein */}
-        <div className="pointer-events-none absolute bottom-0 left-1/2 h-[250px] w-[500px] -translate-x-1/2 translate-y-1/3 rounded-full bg-primary/10 blur-3xl" />
+        <div className="pointer-events-none absolute bottom-0 left-1/2 h-[250px] w-[500px] -translate-x-1/2 translate-y-1/3 rounded-full bg-primary/10 blur-3xl -z-10" />
       </section>
     </main>
   )

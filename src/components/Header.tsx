@@ -96,9 +96,6 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Button asChild variant="outline">
-            <Link href="/termin">Termin buchen</Link>
-          </Button>
           <Button asChild>
             <Link href="/kontakt">Kontakt</Link>
           </Button>

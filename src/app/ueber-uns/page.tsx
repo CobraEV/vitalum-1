@@ -13,7 +13,7 @@ const TEAM_MEMBERS = [
   },
   {
     name: 'Lumnije Jaiji',
-    role: 'Pflegedienstleitung & Stv. CEO',
+    role: 'CVO & Stv. CEO',
     image: '/team/platzhalter-frau.png',
     phone: '+41 55 511 93 93',
     email: 'lumnije.jaiji@spitex-vitalum.ch',

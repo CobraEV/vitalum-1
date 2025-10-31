@@ -1,5 +1,5 @@
 import ContactForm from '@/components/ContactForm'
-import { Globe, Mail, MapPin, Phone } from 'lucide-react'
+import { ClockIcon, Mail, MapPin, Phone } from 'lucide-react'
 import Link from 'next/link'
 
 export default function KontaktPage() {
@@ -21,12 +21,8 @@ export default function KontaktPage() {
           {/* 📞 Kontaktinformationen */}
           <div className="space-y-8">
             <h2 className="text-2xl font-semibold text-primary">
-              Kontaktinformationen
+              So erreichen Sie uns
             </h2>
-            <p className="text-muted-foreground leading-relaxed max-w-md">
-              Unser Büro befindet sich im Herzen von Netstal. Sie erreichen uns
-              telefonisch, per E-Mail oder über unser Kontaktformular.
-            </p>
 
             <div className="space-y-5">
               {[
@@ -43,15 +39,15 @@ export default function KontaktPage() {
                   href: 'mailto:info@spitex-vitalum.ch',
                 },
                 {
-                  icon: <Globe className="h-5 w-5 text-primary" />,
-                  label: 'Webseite',
-                  value: 'www.spitex-vitalum.ch',
-                  href: 'https://www.spitex-vitalum.ch',
-                },
-                {
                   icon: <MapPin className="h-5 w-5 text-primary" />,
                   label: 'Adresse',
                   value: 'Postweg 18, 8754 Netstal',
+                  href: 'https://maps.google.com/?q=Postweg+18,+8754+Netstal',
+                },
+                {
+                  icon: <ClockIcon className="h-5 w-5 text-primary" />,
+                  label: 'Öffnungszeiten',
+                  value: 'Montag-Freitag: 08:00 - 12:00, 13:00 - 17:00',
                   href: 'https://maps.google.com/?q=Postweg+18,+8754+Netstal',
                 },
               ].map((item, i) => (

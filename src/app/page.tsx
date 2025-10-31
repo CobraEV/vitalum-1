@@ -1,15 +1,17 @@
+import Einsatzgebiet from '@/components/Einsatzgebiet'
 import Hero from '@/components/Hero'
 import ServicesSection from '@/components/ServicesSection'
-import BenefitsSection from '@/components/BenefitsSection'
-import ContactCTA from '@/components/ContactCTA'
 
 const Page = () => {
   return (
     <>
       <Hero />
       <ServicesSection />
-      <BenefitsSection />
-      <ContactCTA />
+      <div className="bg-muted">
+        <div className="container py-8 lg:py-12">
+          <Einsatzgebiet />
+        </div>
+      </div>
     </>
   )
 }

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Mail, Phone } from 'lucide-react'
+import { Instagram, Linkedin } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -25,80 +25,76 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* 🧭 Navigation */}
+          {/* 🧭 Standort */}
           <div>
             <p className="text-sm font-medium text-foreground uppercase tracking-wide">
-              Navigation
+              Standort
             </p>
-            <ul className="mt-3 space-y-2 text-sm">
-              <li>
-                <Link className="hover:text-primary transition-colors" href="/">
-                  Home
-                </Link>
-              </li>
-              <li>
+            <div className="mt-4 space-y-3 text-sm text-muted-foreground">
+              <div>
                 <Link
-                  className="hover:text-primary transition-colors"
-                  href="/dienstleistungen"
+                  href="https://www.google.com/maps?q=Postweg+18,+8754+Netstal"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Dienstleistungen
+                  Postweg 18
+                  <br />
+                  8754 Netstal
                 </Link>
-              </li>
-              <li>
-                <Link
-                  className="hover:text-primary transition-colors"
-                  href="/ueber-uns"
-                >
-                  Über Uns
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="hover:text-primary transition-colors"
-                  href="/jobs"
-                >
-                  Jobs
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="hover:text-primary transition-colors"
-                  href="/kontakt"
-                >
-                  Kontakt
-                </Link>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
 
-          {/* 📞 Kontakt */}
+          {/* 🌐 Social & Services */}
           <div>
             <p className="text-sm font-medium text-foreground uppercase tracking-wide">
-              Kontakt
+              Vernetzt mit uns
             </p>
-            <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
-              <li className="flex items-center gap-2">
-                <Mail className="size-4 text-primary shrink-0" />
-                <Link
-                  href="mailto:info@spitex-vitalum.ch"
-                  className="hover:text-primary transition-colors break-all"
-                >
-                  info@spitex-vitalum.ch
-                </Link>
-              </li>
-              <li className="flex items-center gap-2">
-                <Phone className="size-4 text-primary shrink-0" />
-                <Link
-                  href="tel:+41555119393"
-                  className="hover:text-primary transition-colors"
-                >
-                  +41 55 511 93 93
-                </Link>
-              </li>
-              <li className="pt-1 text-xs text-muted-foreground/80">
-                Postweg 18, 8754 Netstal
-              </li>
-            </ul>
+            <div className="mt-4 flex flex-wrap items-center gap-3">
+              {/* Instagram */}
+              <Link
+                href="https://www.instagram.com/spitexvitalum"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground hover:bg-primary hover:text-white transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram size={18} />
+              </Link>
+
+              {/* LinkedIn */}
+              <Link
+                href="https://www.linkedin.com/company/spitex-vitalum"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground hover:bg-primary hover:text-white transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={18} />
+              </Link>
+
+              {/* ASPS */}
+              <Link
+                href="https://www.spitex.ch"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                aria-label="ASPS"
+              >
+                ASPS
+              </Link>
+
+              {/* OPAN */}
+              <Link
+                href="https://www.opanspitex.ch"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                aria-label="OPAN"
+              >
+                OPAN
+              </Link>
+            </div>
           </div>
         </div>
 

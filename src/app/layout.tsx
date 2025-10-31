@@ -5,7 +5,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 const siteUrl = 'https://www.vitalum.ch'
-const siteName = 'Vitalum – Pflege mit Herz'
+const siteName = 'Spitex Vitalum – Vertraut, Verbunden, Daheim'
 const siteDescription =
   'Vitalum bietet professionelle Spitex- und Pflegeleistungen im Kanton St. Gallen. Individuell, zuverlässig und mit Herz – für mehr Lebensqualität zu Hause.'
 const ogImage = `${siteUrl}/hero.jpg`
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: siteName,
-    template: '%s | Vitalum',
+    template: '%s | Spitex Vitalum',
   },
   description: siteDescription,
   keywords: [

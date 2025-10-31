@@ -50,45 +50,48 @@ export default function ServicesSection() {
 
   return (
     <section className="relative border-t border-border bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <div className="mb-8 lg:mb-10 flex items-end justify-between gap-4">
-          <div>
-            <h2 className="font-bold tracking-tight text-foreground text-2xl sm:text-3xl">
-              Dienstleistungen
-            </h2>
-            <p className="mt-2 text-muted-foreground">
-              Ein Auszug unserer Angebote – individuell, verlässlich und nah.
-            </p>
-          </div>
+      <div className="container py-8 lg:py-12">
+        <div className="mb-8 lg:mb-10 flex items-center justify-center gap-4">
+          <h2 className="font-bold tracking-tight text-foreground text-center text-2xl sm:text-3xl">
+            Dienstleistungen
+          </h2>
         </div>
 
         <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((item) => (
-            <li key={item.label}>
-              <div className="group rounded-xl border border-border bg-card p-5 shadow-sm transition-all hover:border-primary/40 hover:shadow-md">
-                <Link href={item.href} className="flex items-start gap-4">
-                  <span className="relative inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full">
-                    <Image src={item.icon} alt="" width={26} height={26} />
-                  </span>
-                  <div className="min-w-0">
-                    <h3 className="text-lg font-semibold leading-snug group-hover:text-secondary transition-colors">
-                      {item.label}
-                    </h3>
-                    <p className="mt-2 text-sm text-muted-foreground">
-                      {item.description}
-                    </p>
+            <li key={item.label} className="h-full">
+              <div className="group flex h-full flex-col justify-between rounded-xl border border-border bg-card p-5 shadow-sm transition-all hover:border-primary/40 hover:shadow-md">
+                <div className="flex flex-col h-full">
+                  <div className="flex items-start gap-4">
+                    <span className="relative inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full">
+                      <Image src={item.icon} alt="" width={32} height={32} />
+                    </span>
+                    <div className="min-w-0">
+                      <h3 className="text-lg font-semibold leading-snug group-hover:text-secondary transition-colors">
+                        {item.label}
+                      </h3>
+                      <p className="mt-2 text-sm text-muted-foreground">
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
-                </Link>
+
+                  {/* 🧭 Mehr erfahren Button */}
+                  <div className="mt-auto pt-6">
+                    <Button
+                      asChild
+                      variant="outline"
+                      size="sm"
+                      className="w-full justify-center transition-colors"
+                    >
+                      <Link href={item.href}>Mehr erfahren</Link>
+                    </Button>
+                  </div>
+                </div>
               </div>
             </li>
           ))}
         </ul>
-
-        <div className="mt-8 sm:hidden">
-          <Button asChild variant="outline" className="w-full">
-            <Link href="/dienstleistungen">Alle Dienstleistungen</Link>
-          </Button>
-        </div>
       </div>
     </section>
   )

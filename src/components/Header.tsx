@@ -2,10 +2,11 @@
 
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
+import { PhoneIcon } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react'
 
 type NavChild = { href: string; label: string }
 type NavItem = { href: string; label: string; children?: NavChild[] }
@@ -30,7 +31,7 @@ const NAV_ITEMS: NavItem[] = [
       { href: '/ueber-uns#feedback', label: 'Feedback-Formular' },
     ],
   },
-  { href: '/jobs', label: 'Jobs' },
+  { href: '/karriere', label: 'Karriere' },
   { href: '/kontakt', label: 'Kontakt' },
 ]
 
@@ -47,7 +48,7 @@ export function Header() {
   }, [])
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6">
         {/* Logo */}
         <div className="flex items-center gap-3">
@@ -59,9 +60,9 @@ export function Header() {
             <Image
               src="/Logo_Vitalum.svg"
               alt="Vitalum Logo"
-              width={140}
-              height={32}
-              className="h-8 w-auto"
+              width={160}
+              height={40}
+              className="h-9 w-auto"
               priority
             />
           </Link>
@@ -116,7 +117,10 @@ export function Header() {
         {/* Desktop CTA */}
         <div className="hidden items-center gap-3 lg:flex">
           <Button asChild>
-            <Link href="/kontakt">Kontaktformular</Link>
+            <Link href="tel:+41555119393">
+              <PhoneIcon />
+              +41 55 511 93 93
+            </Link>
           </Button>
         </div>
 

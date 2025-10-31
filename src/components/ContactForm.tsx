@@ -4,6 +4,8 @@ import { useState, useRef } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
+import { Checkbox } from '@/components/ui/checkbox'
+import Link from 'next/link'
 import {
   Dialog,
   DialogContent,
@@ -21,14 +23,19 @@ export default function ContactForm() {
     'idle'
   )
   const [dialogOpen, setDialogOpen] = useState(false)
+  const [privacyAccepted, setPrivacyAccepted] = useState(false)
   const formRef = useRef<HTMLFormElement>(null)
 
   async function handleSubmit(formData: FormData) {
+    if (!privacyAccepted) return // ❌ Schutz falls Checkbox umgangen wird
     setStatus('sending')
     const result = await sendMail(formData)
     setStatus(result.success ? 'done' : 'error')
     setDialogOpen(true)
-    if (result.success) formRef.current?.reset()
+    if (result.success) {
+      formRef.current?.reset()
+      setPrivacyAccepted(false)
+    }
   }
 
   return (
@@ -126,6 +133,30 @@ export default function ContactForm() {
             autoComplete="off"
             inputMode="text"
           />
+        </div>
+
+        {/* 🔒 Datenschutz (ShadCN Checkbox) */}
+        <div className="flex items-start justify-center gap-2 mt-2">
+          <Checkbox
+            id="privacy"
+            checked={privacyAccepted}
+            onCheckedChange={(checked) => setPrivacyAccepted(checked === true)}
+            required
+          />
+          <label
+            htmlFor="privacy"
+            className="text-sm text-muted-foreground leading-snug cursor-pointer"
+          >
+            Ich akzeptiere die{' '}
+            <Link
+              href="/datenschutz"
+              target="_blank"
+              className="text-primary hover:underline font-medium"
+            >
+              Datenschutzrichtlinien
+            </Link>
+            .
+          </label>
         </div>
 
         {/* 📨 Submit */}

@@ -8,10 +8,10 @@ import Link from 'next/link'
 import { useCallback, useEffect, useRef, useState } from 'react'
 
 const images = [
-  '/assets/images/getty-images-FwG5REYON-Q-unsplash.jpg',
-  '/assets/images/getty-images-WrcKIGP--sQ-unsplash.jpg',
-  '/assets/images/national-cancer-institute-BxXgTQEw1M4-unsplash.jpg',
-  '/assets/images/patty-brito-Y-3Dt0us7e0-unsplash.jpg',
+  '/assets/images/hero-1.jpg',
+  '/assets/images/hero-2.jpg',
+  '/assets/images/hero-3.jpg',
+  '/assets/images/hero-4.jpg',
 ]
 
 export default function Hero() {

@@ -1,46 +1,6 @@
 import Einsatzgebiet from '@/components/Einsatzgebiet'
-import { cn } from '@/lib/utils'
-import Image from 'next/image'
-import Link from 'next/link'
-
-const SERVICES = [
-  {
-    id: 'grundpflege',
-    icon: '/icons/hair-washing.svg',
-    title: 'Grundpflege',
-    text: 'Unterstützung bei Körperpflege, Mobilität und Ernährung. Wir fördern Selbstständigkeit und begleiten mit Respekt – so viel Hilfe wie nötig, so selbstbestimmt wie möglich.',
-  },
-  {
-    id: 'behandlungspflege',
-    icon: '/icons/healthcare.svg',
-    title: 'Behandlungspflege',
-    text: 'Fachgerechte medizinische Pflege nach ärztlicher Verordnung – z. B. Wundversorgung, Medikamentenmanagement, Injektionen oder Vitalzeichenkontrolle – sicher und zuverlässig.',
-  },
-  {
-    id: 'hauswirtschaft',
-    icon: '/icons/cleaning.svg',
-    title: 'Hauswirtschaft',
-    text: 'Hilfe im Alltag: Einkaufen, Kochen, Reinigung, Wäsche und Organisation. Wir entlasten, damit Sie Energie für die wirklich wichtigen Dinge haben.',
-  },
-  {
-    id: 'akut-uebergang',
-    icon: '/icons/check-up.svg',
-    title: 'Akut- & Übergangspflege',
-    text: 'Kurzzeitige, intensive Unterstützung nach Spitalaufenthalt, Krankheit oder Unfall. Wir stabilisieren, planen die Nachsorge und bringen Sie sicher zurück in den Alltag.',
-  },
-  {
-    id: 'angehoerigenpflege',
-    icon: '/icons/family_1.svg',
-    title: 'Angehörigenpflege',
-    text: 'Entlastung, Anleitung und Unterstützung für pflegende Angehörige – wir stärken Sie mit Rat, Tat und Herz.',
-  },
-  {
-    id: 'begleitung-betreuung',
-    icon: '/icons/nursing-home.svg',
-    title: 'Begleitung & Betreuung',
-    text: 'Verlässliche Präsenz im Alltag: Gespräche, Spaziergänge, Terminbegleitung, aktivierende Beschäftigung – für mehr Lebensqualität zu Hause.',
-  },
-]
+import Pricing from '@/components/Pricing'
+import ServicesSection from '@/components/ServicesSection'
 
 export default function DienstleistungenPage() {
   return (
@@ -51,142 +11,18 @@ export default function DienstleistungenPage() {
           Unsere Dienstleistungen
         </h1>
         <p className="max-w-2xl mx-auto text-muted-foreground">
-          Mit Herz, Kompetenz und Nähe – wir unterstützen Sie und Ihre
-          Angehörigen in allen Lebenslagen. Unser Ziel ist Ihr Wohlbefinden zu
-          Hause.
+          Unsere Dienstleistungen unterstützen Sie individuell und zuverlässig
+          in jeder Lebenslage. Wir verbinden Fachkompetenz mit Menschlichkeit,
+          für ein Leben in gewohnter Umgebung.
         </p>
       </section>
 
-      {/* 💚 Services */}
-      <section id="angebot" className="space-y-8">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((s) => (
-            <div
-              key={s.id}
-              className={cn(
-                'rounded-2xl border border-border bg-card/60 backdrop-blur-sm p-6 shadow-sm hover:shadow-md transition-all duration-300',
-                'hover:-translate-y-1 hover:bg-card'
-              )}
-            >
-              <div className="flex flex-col items-start space-y-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
-                  <Image
-                    src={s.icon}
-                    alt=""
-                    width={32}
-                    height={32}
-                    className="object-contain"
-                  />
-                </div>
-                <h3 className="text-lg font-semibold text-primary">
-                  {s.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {s.text}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <ServicesSection />
 
       {/* 🗺 Einsatzgebiet */}
       <Einsatzgebiet />
 
-      {/* 💰 Tarife */}
-      <section
-        id="tarife"
-        className="scroll-mt-24 relative overflow-hidden rounded-[2rem] border border-border bg-gradient-to-br from-[#e8f7f4] via-background to-[#f7fbfa] px-6 py-20 shadow-[inset_0_2px_20px_-5px_rgba(76,195,170,0.2)]"
-      >
-        {/* Glanz / Licht */}
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(76,195,170,0.15)_0%,transparent_70%)]" />
-
-        <h2 className="relative z-10 text-4xl font-bold text-primary text-center tracking-tight">
-          Tarife & Kosten
-        </h2>
-
-        <p className="relative z-10 mx-auto mt-4 max-w-2xl text-center text-muted-foreground leading-relaxed">
-          Wir glauben an Klarheit und Vertrauen. Unsere Tarife sind fair,
-          nachvollziehbar und orientieren sich an den Richtlinien des{' '}
-          <strong>Kantons St. Gallen</strong> sowie der Krankenkassen.
-        </p>
-
-        <div className="relative z-10 mx-auto mt-12 grid max-w-3xl gap-8 sm:grid-cols-3 text-left">
-          {/* Punkt 1 */}
-          <div className="flex flex-col items-start space-y-3 sm:items-center sm:text-center">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-              <Image
-                src="/icons/healthcare.svg"
-                alt=""
-                width={28}
-                height={28}
-                className="object-contain"
-              />
-            </div>
-            <h3 className="font-semibold text-foreground">Pflegeleistungen</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Ärztlich verordnete Pflege wird direkt von der Grundversicherung
-              übernommen.
-            </p>
-          </div>
-
-          {/* Punkt 2 */}
-          <div className="flex flex-col items-start space-y-3 sm:items-center sm:text-center">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-              <Image
-                src="/icons/cleaning.svg"
-                alt=""
-                width={28}
-                height={28}
-                className="object-contain"
-              />
-            </div>
-            <h3 className="font-semibold text-foreground">
-              Hauswirtschaft & Betreuung
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Leistungen ausserhalb der ärztlichen Verordnung werden nach
-              Aufwand berechnet.
-            </p>
-          </div>
-
-          {/* Punkt 3 */}
-          <div className="flex flex-col items-start space-y-3 sm:items-center sm:text-center">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-              <Image
-                src="/icons/family_1.svg"
-                alt=""
-                width={28}
-                height={28}
-                className="object-contain"
-              />
-            </div>
-            <h3 className="font-semibold text-foreground">
-              Individuelle Offerten
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Wir beraten Sie persönlich und erstellen eine transparente
-              Kostenübersicht – abgestimmt auf Ihre Situation.
-            </p>
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div className="relative z-10 mt-14 flex justify-center">
-          <Link
-            href="/kontakt"
-            className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-primary px-10 py-4 text-white font-medium shadow-md transition-all hover:shadow-lg hover:bg-primary/90"
-          >
-            <span className="relative z-10 transition-transform group-hover:translate-y-[-1px]">
-              Persönliche Beratung anfragen
-            </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/70 to-secondary/70 opacity-0 group-hover:opacity-100 transition-opacity" />
-          </Link>
-        </div>
-
-        {/* Sanfter Lichtschein */}
-        <div className="pointer-events-none absolute bottom-0 left-1/2 h-[250px] w-[500px] -translate-x-1/2 translate-y-1/3 rounded-full bg-primary/10 blur-3xl -z-10" />
-      </section>
+      <Pricing />
     </main>
   )
 }

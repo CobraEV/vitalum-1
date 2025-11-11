@@ -1,6 +1,12 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Instagram, Linkedin } from 'lucide-react'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip'
 
 export default function Footer() {
   return (
@@ -28,7 +34,7 @@ export default function Footer() {
           {/* 🧭 Standort */}
           <div>
             <p className="text-sm font-medium text-foreground uppercase tracking-wide">
-              Standort
+              Spitex Vitalum
             </p>
             <div className="mt-4 space-y-3 text-sm text-muted-foreground">
               <div>
@@ -41,6 +47,21 @@ export default function Footer() {
                   <br />
                   8754 Netstal
                 </Link>
+                <br />
+                <br />
+                <div>
+                  <Link href="tel:+415515119393" className="hover:text-primary">
+                    055 511 93 93
+                  </Link>
+                </div>
+                <div>
+                  <Link
+                    href="mailto:info@spitex-vitalum.ch"
+                    className="hover:text-primary"
+                  >
+                    info@spitex-vitalum.ch
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -50,51 +71,85 @@ export default function Footer() {
             <p className="text-sm font-medium text-foreground uppercase tracking-wide">
               Vernetzt mit uns
             </p>
-            <div className="mt-4 flex flex-wrap items-center gap-3">
-              {/* Instagram */}
-              <Link
-                href="https://www.instagram.com/spitexvitalum"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground hover:bg-primary hover:text-white transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram size={18} />
-              </Link>
+            <TooltipProvider delayDuration={100}>
+              <div className="mt-4 flex flex-wrap items-center gap-3">
+                {/* Instagram */}
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href="https://www.instagram.com/spitexvitalum"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground hover:bg-primary hover:text-white transition-colors"
+                      aria-label="Instagram"
+                    >
+                      <Instagram size={18} />
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent side="top">Instagram</TooltipContent>
+                </Tooltip>
 
-              {/* LinkedIn */}
-              <Link
-                href="https://www.linkedin.com/company/spitex-vitalum"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground hover:bg-primary hover:text-white transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={18} />
-              </Link>
+                {/* LinkedIn */}
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href="https://www.linkedin.com/company/spitex-vitalum"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground hover:bg-primary hover:text-white transition-colors"
+                      aria-label="LinkedIn"
+                    >
+                      <Linkedin size={18} />
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent side="top">LinkedIn</TooltipContent>
+                </Tooltip>
 
-              {/* ASPS */}
-              <Link
-                href="https://www.spitex.ch"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground hover:bg-primary hover:text-white transition-colors text-xs font-medium"
-                aria-label="ASPS"
-              >
-                ASPS
-              </Link>
+                {/* ASPS */}
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href="https://www.spitex.ch"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                      aria-label="ASPS"
+                    >
+                      <Image
+                        src="/asps.png"
+                        height={50}
+                        width={50}
+                        alt="ASPS"
+                      />
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent side="top">
+                    Spitex Verband Schweiz (ASPS)
+                  </TooltipContent>
+                </Tooltip>
 
-              {/* OPAN */}
-              <Link
-                href="https://www.opanspitex.ch"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground hover:bg-primary hover:text-white transition-colors text-xs font-medium"
-                aria-label="OPAN"
-              >
-                OPAN
-              </Link>
-            </div>
+                {/* OPAN */}
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href="https://www.opanspitex.ch"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground hover:bg-primary hover:text-white transition-colors text-xs font-medium"
+                      aria-label="OPAN"
+                    >
+                      <Image
+                        src="/opan.png"
+                        height={50}
+                        width={50}
+                        alt="OPAN"
+                      />
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent side="top">OPAN Spitex</TooltipContent>
+                </Tooltip>
+              </div>
+            </TooltipProvider>
           </div>
         </div>
 

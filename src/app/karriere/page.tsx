@@ -1,72 +1,80 @@
-import { Briefcase, HeartHandshake, Sparkles } from 'lucide-react'
+import { AktuelleStellenSection } from '@/components/AktuelleStellenSection'
+import { Briefcase, Home, Sparkles, Star, Users } from 'lucide-react'
 
 export default function JobsPage() {
   return (
-    <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
-      {/* 💼 Header */}
-      <section className="text-center space-y-4">
-        <h1 className="text-4xl font-bold text-primary sm:text-5xl">
-          Arbeiten bei Vitalum
+    <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-0 space-y-0">
+      {/* 🌿 Intro */}
+      <section className="scroll-mt-24 bg-background py-20 sm:py-24 text-center space-y-6">
+        <h1 className="text-4xl sm:text-5xl font-bold text-primary">
+          Werde Teil von Spitex Vitalum
         </h1>
-        <p className="max-w-2xl mx-auto text-muted-foreground">
-          Pflege mit Herz, Kompetenz und Menschlichkeit – dafür steht unser
-          Team. Wir wachsen stetig und freuen uns über engagierte Menschen, die
-          unsere Vision teilen.
-        </p>
-      </section>
 
-      {/* ✨ Icon-Highlights */}
-      <section className="grid gap-10 sm:grid-cols-3 text-center">
-        <div className="p-8 rounded-3xl border border-border bg-gradient-to-br from-primary/[0.05] to-secondary/[0.08] shadow-sm transition-transform hover:scale-[1.03]">
-          <HeartHandshake className="mx-auto mb-4 text-primary" size={36} />
-          <h3 className="text-lg font-semibold text-primary mb-1">
-            Wertschätzung
-          </h3>
-          <p className="text-sm text-muted-foreground">
-            Bei uns zählt der Mensch – Respekt, Vertrauen und Teamgeist stehen
-            im Mittelpunkt.
+        <div className="max-w-3xl mx-auto space-y-4 text-muted-foreground leading-relaxed">
+          <p>
+            Bei Spitex Vitalum verbinden wir Fachwissen mit Menschlichkeit.
+            Unser Ziel ist es, Menschen in ihrem Zuhause Sicherheit, Würde und
+            Lebensfreude zu schenken – Tag für Tag.
           </p>
-        </div>
-
-        <div className="p-8 rounded-3xl border border-border bg-gradient-to-br from-primary/[0.05] to-secondary/[0.08] shadow-sm transition-transform hover:scale-[1.03]">
-          <Sparkles className="mx-auto mb-4 text-primary" size={36} />
-          <h3 className="text-lg font-semibold text-primary mb-1">
-            Entwicklung
-          </h3>
-          <p className="text-sm text-muted-foreground">
-            Wir fördern Weiterbildungen und schaffen Raum für persönliche und
-            berufliche Entfaltung.
-          </p>
-        </div>
-
-        <div className="p-8 rounded-3xl border border-border bg-gradient-to-br from-primary/[0.05] to-secondary/[0.08] shadow-sm transition-transform hover:scale-[1.03]">
-          <Briefcase className="mx-auto mb-4 text-primary" size={36} />
-          <h3 className="text-lg font-semibold text-primary mb-1">
-            Moderne Arbeitsbedingungen
-          </h3>
-          <p className="text-sm text-muted-foreground">
-            Flexible Arbeitszeiten, faire Entlohnung und ein starkes
-            Miteinander.
+          <p>
+            Wenn du Freude daran hast, Verantwortung zu übernehmen, selbständig
+            zu arbeiten und ein starkes Team an deiner Seite schätzt, dann bist
+            du bei uns genau richtig. Werde Teil von Spitex Vitalum und gestalte
+            mit uns eine Pflege, die bewegt.
           </p>
         </div>
       </section>
 
       {/* 📋 Aktuelle Stellen */}
-      <section
-        id="stellen"
-        className="scroll-mt-24 text-center space-y-6 max-w-2xl mx-auto"
-      >
-        <h2 className="text-3xl font-semibold text-primary">
-          Aktuelle Stellen
-        </h2>
+      <AktuelleStellenSection />
 
-        <p className="text-muted-foreground">
-          Momentan sind keine offenen Stellen ausgeschrieben.
-          <br />
-          Wir freuen uns jedoch immer über engagierte Menschen, die sich mit
-          unserer Philosophie identifizieren.
-        </p>
+      {/* 💎 Benefits */}
+      <section className="scroll-mt-24 bg-background py-20 sm:py-24 text-center space-y-10">
+        <div className="space-y-4">
+          <h2 className="text-3xl font-semibold text-primary">
+            Benefits, die dich erwarten
+          </h2>
+          <p className="max-w-2xl mx-auto text-muted-foreground leading-relaxed">
+            Wir bieten dir ein modernes Arbeitsumfeld, das Fachkompetenz,
+            Menschlichkeit und Lebensqualität verbindet.
+          </p>
+        </div>
+
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <BenefitCard icon={<Star size={32} />} title="25 Ferientage" />
+          <BenefitCard
+            icon={<Home size={32} />}
+            title="Vereinbarkeit von Beruf & Familie"
+          />
+          <BenefitCard
+            icon={<Sparkles size={32} />}
+            title="Individuelle Förderung"
+          />
+          <BenefitCard
+            icon={<Briefcase size={32} />}
+            title="Faire Entlohnung & Sozialleistungen"
+          />
+          <BenefitCard
+            icon={<Users size={32} />}
+            title="Mitarbeiterevents & Teamkultur"
+          />
+        </div>
       </section>
     </main>
+  )
+}
+
+function BenefitCard({
+  icon,
+  title,
+}: {
+  icon: React.ReactNode
+  title: string
+}) {
+  return (
+    <div className="p-8 rounded-3xl border border-border bg-gradient-to-br from-primary/[0.05] to-secondary/[0.08] shadow-sm transition-transform hover:scale-[1.02] flex flex-col items-center text-center space-y-3">
+      <div className="text-primary">{icon}</div>
+      <h3 className="text-lg font-semibold text-primary">{title}</h3>
+    </div>
   )
 }

@@ -13,8 +13,8 @@ const TEAM_MEMBERS = [
   },
   {
     name: 'Lumnije Jaiji',
-    role: 'CVO & Stv. CEO',
-    image: '/team/platzhalter-frau.png',
+    role: 'CNO und Stv. CEO',
+    image: '/team/LJ.png',
     phone: '+41 55 511 93 93',
     email: 'lumnije.jaiji@spitex-vitalum.ch',
   },
@@ -22,12 +22,59 @@ const TEAM_MEMBERS = [
 
 export default function UeberUnsPage() {
   return (
-    <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
+    <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-0 space-y-0">
+      {/* 🌿 Vision */}
+      <section
+        id="vision"
+        className="scroll-mt-24 bg-background py-20 sm:py-24 text-center space-y-6"
+      >
+        <h2 className="text-3xl font-semibold text-primary">Unsere Vision</h2>
+
+        <div className="max-w-3xl mx-auto space-y-4 text-muted-foreground leading-relaxed">
+          <p>
+            Unsere Vision ist es, Menschen durch qualitativ hochwertige,
+            verlässliche und empathische Pflege ein selbstbestimmtes Leben in
+            ihrer gewohnten Umgebung zu ermöglichen. Wir schaffen Vertrauen
+            durch Fachkompetenz, Innovation und Menschlichkeit – und gestalten
+            eine Pflege, die den Menschen in seiner Ganzheit sieht.
+          </p>
+
+          <p>
+            Als zukunftsorientierte Spitex stehen wir für eine nachhaltige,
+            vernetzte und verantwortungsbewusste Gesundheitsversorgung. Wir
+            fördern eine Pflegekultur, die auf Respekt, Qualität und
+            kontinuierlicher Weiterentwicklung basiert – zum Wohl unserer
+            Klientinnen, Klienten und der Gesellschaft.
+          </p>
+        </div>
+      </section>
+
+      {/* 🧭 Leitbild */}
+      <section
+        id="leitbild"
+        className="scroll-mt-24 bg-muted py-20 sm:py-24 text-center space-y-6"
+      >
+        <h2 className="text-3xl font-semibold text-primary">Leitbild</h2>
+
+        <div className="max-w-3xl mx-auto text-muted-foreground leading-relaxed">
+          <p>
+            Wir setzen uns für eine professionelle, empathische und individuelle
+            Pflege und Betreuung im gewohnten Umfeld unserer Klientinnen und
+            Klienten ein. Mit innovativen Lösungen, Fachkompetenz und
+            Menschlichkeit fördern wir Lebensqualität, Selbstständigkeit und
+            Sicherheit Zuhause. Unser Handeln ist geprägt von Respekt,
+            Verantwortung und Qualität sowie dem Streben nach kontinuierlicher
+            Weiterentwicklung.
+          </p>
+        </div>
+      </section>
+
       {/* 👩‍⚕️ Team */}
-      <section id="team" className="scroll-mt-24 space-y-2">
-        <h2 className="text-3xl font-semibold text-primary text-center">
-          Unser Team
-        </h2>
+      <section
+        id="team"
+        className="scroll-mt-24 bg-background py-20 sm:py-24 text-center space-y-2"
+      >
+        <h2 className="text-3xl font-semibold text-primary">Unser Team</h2>
 
         <p className="text-center max-w-2xl mx-auto text-muted-foreground">
           Unsere Mitarbeitenden sind das Herz von Vitalum – qualifiziert,
@@ -41,12 +88,12 @@ export default function UeberUnsPage() {
               className="group relative flex flex-col items-center text-center rounded-3xl border border-border bg-gradient-to-br from-primary/[0.05] via-background to-secondary/[0.08] p-8 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
             >
               {/* Portrait */}
-              <div className="relative h-36 w-36 overflow-hidden rounded-full border border-border shadow-md">
+              <div className="relative h-48 w-48 sm:h-56 sm:w-56 overflow-hidden rounded-full border-2 border-primary/20 shadow-lg bg-muted">
                 <Image
                   src={member.image}
                   alt={member.name}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
 
@@ -84,53 +131,11 @@ export default function UeberUnsPage() {
         </div>
       </section>
 
-      {/* 💚 Vision / Leitbild */}
+      {/* 📝 Feedback */}
       <section
-        id="vision-leitbild"
-        className="scroll-mt-24 relative overflow-hidden rounded-[2rem] border border-border bg-gradient-to-br from-[#e8f7f4] via-background to-[#f7fbfa] py-10 sm:py-16 lg:py-24 shadow-[inset_0_2px_20px_-5px_rgba(76,195,170,0.2)]"
+        id="feedback"
+        className="scroll-mt-24 bg-muted py-20 sm:py-24 text-center space-y-6"
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-2 items-center">
-            {/* 🖼 Bild */}
-            <div className="relative order-1 lg:order-none aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-md">
-              <Image
-                src="/assets/images/getty-images-WrcKIGP--sQ-unsplash.jpg"
-                alt="Pflege mit Herz – Vitalum Vision"
-                fill
-                className="object-cover object-center"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
-            </div>
-
-            {/* 📖 Text */}
-            <div className="space-y-6 text-center">
-              <h2 className="text-3xl font-semibold text-primary">
-                Vision & Leitbild
-              </h2>
-
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
-                  Wir glauben an eine Pflege, die mehr ist als nur Versorgung –
-                  sie ist Begleitung, Vertrauen und Nähe.
-                </p>
-                <p>
-                  Unser Leitbild ist geprägt von Menschlichkeit,
-                  Professionalität und Respekt. Jeder Mensch verdient Würde und
-                  Aufmerksamkeit – unabhängig von Alter oder Lebenssituation.
-                </p>
-                <p>
-                  Gemeinsam gestalten wir Pflege, die stärkt, entlastet und
-                  verbindet.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 📝 Feedback-Formular */}
-      <section id="feedback" className="scroll-mt-24 text-center space-y-6">
         <h2 className="text-3xl font-semibold text-primary">
           Feedback-Formular
         </h2>
@@ -142,7 +147,12 @@ export default function UeberUnsPage() {
 
         <div className="mt-8">
           <Button asChild>
-            <Link href="/ueber-uns/feedback">Zum Formular</Link>
+            <Link
+              href="https://forms.office.com/Pages/ShareFormPage.aspx?id=PUqYERdLMkCnnfVFJNu4atsh9v4yD_BOrfrCt4IoaENUN1NUUkUxWURQUTNQRlBLNDY5SEsxOFJaUC4u&sharetoken=XLpLJkZuq0OkyZbRJb5Y"
+              target="_blank"
+            >
+              Zum Formular
+            </Link>
           </Button>
         </div>
       </section>

@@ -15,57 +15,103 @@ export default function Pricing() {
       </h2>
 
       <p className="relative z-10 mx-auto mt-4 max-w-2xl text-center text-muted-foreground leading-relaxed">
-        Unsere Tarife orientieren sich an den gängigen Ansätzen der
-        Spitex-Leistungen gemäss kantonalen Richtlinien.
+        Unsere Tarife richten sich nach den kantonalen Vorgaben sowie den
+        Standards der ASPS Schweiz. KVG-pflichtige Leistungen werden nach den
+        gesetzlichen Richtlinien finanziert. Nicht-KVG-Leistungen werden direkt
+        mit Klientinnen, Klienten oder Angehörigen abgerechnet.
       </p>
 
-      {/* Tariftabelle */}
-      <div className="relative z-10 mx-auto mt-12 max-w-2xl divide-y divide-border border border-border rounded-xl bg-card/50 shadow-sm backdrop-blur-sm">
-        <div className="flex flex-col sm:flex-row justify-between gap-2 px-6 py-4">
-          <span className="font-medium text-foreground">
-            Abklärung, Beratung und Koordination
-          </span>
-          <span className="text-primary font-semibold">CHF 76.90 / Std.</span>
+      {/* 🩺 KVG-pflichtige Leistungen */}
+      <div className="relative z-10 mx-auto mt-12 max-w-2xl">
+        <h3 className="text-xl font-semibold text-primary mb-4 text-center">
+          🩺 Pflegeleistungen (KVG-pflichtig)
+        </h3>
+
+        <div className="divide-y divide-border border border-border rounded-xl bg-card/50 shadow-sm backdrop-blur-sm">
+          <div className="flex flex-col sm:flex-row justify-between gap-2 px-6 py-4">
+            <span className="font-medium text-foreground">
+              Abklärung, Beratung & Koordination
+            </span>
+            <span className="text-primary font-semibold">CHF 76.90 / Std.</span>
+          </div>
+
+          <div className="flex flex-col sm:flex-row justify-between gap-2 px-6 py-4">
+            <span className="font-medium text-foreground">Grundpflege</span>
+            <span className="text-primary font-semibold">CHF 52.60 / Std.</span>
+          </div>
+
+          <div className="flex flex-col sm:flex-row justify-between gap-2 px-6 py-4">
+            <span className="font-medium text-foreground">
+              Untersuchung & Behandlung
+            </span>
+            <span className="text-primary font-semibold">CHF 63.00 / Std.</span>
+          </div>
         </div>
-        <div className="flex flex-col sm:flex-row justify-between gap-2 px-6 py-4">
-          <span className="font-medium text-foreground">Grundpflege</span>
-          <span className="text-primary font-semibold">CHF 52.60 / Std.</span>
-        </div>
-        <div className="flex flex-col sm:flex-row justify-between gap-2 px-6 py-4">
-          <span className="font-medium text-foreground">
-            Untersuchung und Behandlung
-          </span>
-          <span className="text-primary font-semibold">CHF 63.00 / Std.</span>
-        </div>
-        <div className="flex flex-col sm:flex-row justify-between gap-2 px-6 py-4">
-          <span className="font-medium text-foreground">Hauswirtschaft</span>
-          <span className="text-primary font-semibold">CHF 50.00 / Std.</span>
-        </div>
-        <div className="flex flex-col sm:flex-row justify-between gap-2 px-6 py-4">
-          <span className="font-medium text-foreground">Betreuung</span>
-          <span className="text-primary font-semibold">CHF 55.00 / Std.</span>
-        </div>
+
+        <p className="mt-4 text-sm text-muted-foreground text-center leading-relaxed">
+          Diese Leistungen werden gemäss Krankenversicherungsgesetz (KVG) und
+          Krankenpflege-Leistungsverordnung (KLV) finanziert. Die Kosten werden
+          durch Krankenkasse, öffentliche Hand und Patientinnen/Patienten
+          getragen.
+        </p>
       </div>
 
-      {/* Zusatzinfos */}
-      <div className="relative z-10 mx-auto mt-10 max-w-3xl space-y-6 text-sm text-muted-foreground leading-relaxed text-center">
-        <p>
-          Die <strong className="text-foreground">Patientenbeteiligung</strong>{' '}
-          beträgt <strong className="text-foreground">CHF 15.35 / Tag</strong>.
-          Für Personen unter 18 Jahren oder wenn die Kosten durch eine andere
-          Versicherung (z. B. Invaliden-, Unfall- oder Militärversicherung)
-          übernommen werden, entfällt die Patientenbeteiligung. In diesem Fall
-          gelten die Tarife der jeweiligen Versicherung.
+      {/* 🏡 Nicht-KVG-pflichtige Leistungen */}
+      <div className="relative z-10 mx-auto mt-16 max-w-2xl">
+        <h3 className="text-xl font-semibold text-primary mb-4 text-center">
+          🏡 Nicht-KVG-pflichtige Leistungen (Selbstzahler)
+        </h3>
+
+        <div className="divide-y divide-border border border-border rounded-xl bg-card/50 shadow-sm backdrop-blur-sm">
+          <div className="flex flex-col sm:flex-row justify-between gap-2 px-6 py-4">
+            <div className="flex flex-col">
+              <span className="font-medium text-foreground">
+                Hauswirtschaft
+              </span>
+              <span className="text-xs text-muted-foreground">
+                Abrechnung über Zusatzversicherung teilweise möglich
+              </span>
+            </div>
+            <span className="text-primary font-semibold">CHF 50.00 / Std.</span>
+          </div>
+
+          <div className="flex flex-col sm:flex-row justify-between gap-2 px-6 py-4">
+            <span className="font-medium text-foreground">Betreuung</span>
+            <span className="text-primary font-semibold">CHF 55.00 / Std.</span>
+          </div>
+        </div>
+
+        <p className="mt-4 text-sm text-muted-foreground text-center leading-relaxed">
+          Diese Leistungen werden nicht von der Krankenkasse übernommen und
+          direkt mit der betreuten Person oder den Angehörigen abgerechnet.
         </p>
-        <p>
-          Für Einsätze fällt eine{' '}
-          <strong className="text-foreground">Wegpauschale</strong> zwischen{' '}
-          <strong className="text-foreground">CHF 3.00 und CHF 6.00</strong> pro
-          Besuch an, bei hauswirtschaftlichen Leistungen{' '}
-          <strong className="text-foreground">CHF 8.00 pro Besuch</strong>.
-          Nacht-, Wochenend- und Feiertagszuschläge werden mit{' '}
-          <strong className="text-foreground">CHF 15.00 / Std.</strong>{' '}
-          berechnet.
+      </div>
+
+      {/* 👛 Patientenbeteiligung */}
+      <div className="relative z-10 mx-auto mt-16 max-w-3xl text-center">
+        <h3 className="text-xl font-semibold text-primary mb-4">
+          👛 Patientenbeteiligung
+        </h3>
+
+        <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+          Die gesetzliche Patientenbeteiligung beträgt max.{' '}
+          <strong className="text-foreground">CHF 15.35 pro Tag</strong>.
+        </p>
+
+        <p className="text-sm text-muted-foreground leading-relaxed mt-3 max-w-2xl mx-auto">
+          Sie entfällt für:
+        </p>
+
+        <ul className="text-sm text-muted-foreground leading-relaxed mt-2 space-y-1">
+          <li>• Personen unter 18 Jahren</li>
+          <li>
+            • Fälle, in denen IV, UV, MV oder andere Versicherungen die Kosten
+            übernehmen
+          </li>
+        </ul>
+
+        <p className="text-sm text-muted-foreground leading-relaxed mt-3 max-w-2xl mx-auto">
+          In diesen Situationen gelten die Tarife des jeweiligen Kostenträgers.
         </p>
       </div>
 
@@ -82,7 +128,7 @@ export default function Pricing() {
         </Link>
       </div>
 
-      {/* Sanfter Lichtschein */}
+      {/* Soft Glow */}
       <div className="pointer-events-none absolute bottom-0 left-1/2 h-[250px] w-[500px] -translate-x-1/2 translate-y-1/3 rounded-full bg-primary/10 blur-3xl -z-10" />
     </section>
   )

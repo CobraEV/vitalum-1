@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Instagram, Linkedin } from 'lucide-react'
+import { Facebook, Instagram, Linkedin } from 'lucide-react'
 import {
   Tooltip,
   TooltipContent,
@@ -105,8 +105,44 @@ export default function Footer() {
                   <TooltipContent side="top">LinkedIn</TooltipContent>
                 </Tooltip>
 
-                {/* ASPS */}
                 <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href="https://www.facebook.com/spitexvitalum"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground hover:bg-primary hover:text-white transition-colors"
+                      aria-label="Facebook"
+                    >
+                      <Facebook size={18} />
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent side="top">Facebook</TooltipContent>
+                </Tooltip>
+
+                {/* LinkedIn */}
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href="https://www.tiktok.com/spitex-vitalum"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground hover:bg-primary hover:text-white transition-colors"
+                      aria-label="LinkedIn"
+                    >
+                      <Image
+                        alt="TikTok"
+                        src={`/icons/tiktok.svg`}
+                        height={18}
+                        width={18}
+                      />
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent side="top">TikTok</TooltipContent>
+                </Tooltip>
+
+                {/* ASPS */}
+                {/* <Tooltip>
                   <TooltipTrigger asChild>
                     <Link
                       href="https://www.spitex.ch"
@@ -126,10 +162,10 @@ export default function Footer() {
                   <TooltipContent side="top">
                     Spitex Verband Schweiz (ASPS)
                   </TooltipContent>
-                </Tooltip>
+                </Tooltip> */}
 
                 {/* OPAN */}
-                <Tooltip>
+                {/* <Tooltip>
                   <TooltipTrigger asChild>
                     <Link
                       href="https://www.opanspitex.ch"
@@ -147,7 +183,7 @@ export default function Footer() {
                     </Link>
                   </TooltipTrigger>
                   <TooltipContent side="top">OPAN Spitex</TooltipContent>
-                </Tooltip>
+                </Tooltip> */}
               </div>
             </TooltipProvider>
           </div>

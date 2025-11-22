@@ -44,7 +44,11 @@ export default function UeberUnsPage() {
             vernetzte und verantwortungsbewusste Gesundheitsversorgung. Wir
             fördern eine Pflegekultur, die auf Respekt, Qualität und
             kontinuierlicher Weiterentwicklung basiert – zum Wohl unserer
-            Klientinnen, Klienten und der Gesellschaft.
+            Klienten und der Gesellschaft.
+          </p>
+
+          <p className="text-sm text-muted-foreground italic">
+            Vernetzt mit Ärzte Netstal AG, Akut Care, Care Solutions GmbH
           </p>
         </div>
       </section>
@@ -59,12 +63,11 @@ export default function UeberUnsPage() {
         <div className="max-w-3xl mx-auto text-muted-foreground leading-relaxed">
           <p>
             Wir setzen uns für eine professionelle, empathische und individuelle
-            Pflege und Betreuung im gewohnten Umfeld unserer Klientinnen und
-            Klienten ein. Mit innovativen Lösungen, Fachkompetenz und
-            Menschlichkeit fördern wir Lebensqualität, Selbstständigkeit und
-            Sicherheit Zuhause. Unser Handeln ist geprägt von Respekt,
-            Verantwortung und Qualität sowie dem Streben nach kontinuierlicher
-            Weiterentwicklung.
+            Pflege und Betreuung im gewohnten Umfeld unserer Klienten. Mit
+            innovativen Lösungen, Fachkompetenz und Menschlichkeit fördern wir
+            Lebensqualität, Selbstständigkeit und Sicherheit Zuhause. Unser
+            Handeln ist geprägt von Respekt, Verantwortung und Qualität sowie
+            dem Streben nach kontinuierlicher Weiterentwicklung.
           </p>
         </div>
       </section>
@@ -148,7 +151,7 @@ export default function UeberUnsPage() {
         <div className="mt-8">
           <Button asChild>
             <Link
-              href="https://forms.office.com/Pages/ShareFormPage.aspx?id=PUqYERdLMkCnnfVFJNu4atsh9v4yD_BOrfrCt4IoaENUN1NUUkUxWURQUTNQRlBLNDY5SEsxOFJaUC4u&sharetoken=XLpLJkZuq0OkyZbRJb5Y"
+              href="https://forms.office.com/Pages/ResponsePage.aspx?id=PUqYERdLMkCnnfVFJNu4atsh9v4yD_BOrfrCt4IoaENUN1NUUkUxWURQUTNQRlBLNDY5SEsxOFJaUC4u"
               target="_blank"
             >
               Zum Formular

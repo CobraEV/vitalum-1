@@ -1,5 +1,12 @@
 export const services = [
   {
+    label: 'Akut- und Übergangspflege',
+    description:
+      'Kurzzeitige, intensive Unterstützung nach Spitalaufenthalt, Krankheit oder Unfall.',
+    href: '/dienstleistungen/akutpflege',
+    icon: '/icons/check-up.svg',
+  },
+  {
     label: 'Grundpflege',
     description:
       'Unterstützung bei täglicher Körperpflege, An- und Auskleiden sowie Mobilisation.',
@@ -14,25 +21,18 @@ export const services = [
     icon: '/icons/healthcare.svg',
   },
   {
-    label: 'Hauswirtschaft',
-    description:
-      'Hilfe im Haushalt wie Einkaufen, Kochen, Reinigung, Wäsche und Organisation.',
-    href: '/dienstleistungen/hauswirtschaft',
-    icon: '/icons/cleaning.svg',
-  },
-  {
-    label: 'Akut- und Übergangspflege',
-    description:
-      'Kurzzeitige, intensive Unterstützung nach Spitalaufenthalt, Krankheit oder Unfall.',
-    href: '/dienstleistungen/akutpflege',
-    icon: '/icons/check-up.svg',
-  },
-  {
     label: 'Angehörigenpflege',
     description:
       'Entlastung, Anleitung und Unterstützung für pflegende Angehörige im Alltag.',
     href: '/dienstleistungen/angehoerige',
     icon: '/icons/family_1.svg',
+  },
+  {
+    label: 'Abklärung und Beratung',
+    description:
+      'Pflegebedarf abklären, individuelle Planung der Pflege, Beratung und Organisation nach ihrem individuellen Pflegebedürfnis.',
+    href: '/dienstleistungen/abklaerung-beratung',
+    icon: '/icons/list.svg',
   },
   {
     label: 'Begleitung & Betreuung',
@@ -42,10 +42,10 @@ export const services = [
     icon: '/icons/nursing-home.svg',
   },
   {
-    label: 'Abklärung und Beratung',
+    label: 'Hauswirtschaft',
     description:
-      'Pflegebedarf abklären, individuelle Planung der Pflege, Beratung und Organisation nach ihrem individuellen Pflegebedürfnis.',
-    href: '/dienstleistungen/abklaerung-beratung',
-    icon: '/icons/list.svg',
+      'Hilfe im Haushalt wie Einkaufen, Kochen, Reinigung, Wäsche und Organisation.',
+    href: '/dienstleistungen/hauswirtschaft',
+    icon: '/icons/cleaning.svg',
   },
 ] as const

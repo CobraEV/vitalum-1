@@ -19,6 +19,14 @@ const Page = () => {
             Zuhause. Pflege ist mehr als eine Dienstleistung, sie ist Begegnung,
             Vertrauen und Begleitung auf Augenhöhe.
           </p>
+
+          <p className="text-center max-w-2xl mx-auto text-muted-foreground">
+            Der Name Spitex Vitalum stammt vom lateinischen vita - „Leben“ - und
+            steht für Lebenskraft, Vitalität und Lebensfreude. Die Endung -lum
+            verleiht dem Namen eine lichtvolle Dimension und symbolisiert Wärme,
+            Zuversicht und Hoffnung - Werte, die wir tagtäglich in unsere Arbeit
+            einbringen.
+          </p>
         </div>
       </div>
       <section className="relative border-t border-border bg-background">

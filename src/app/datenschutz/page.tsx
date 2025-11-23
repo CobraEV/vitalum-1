@@ -172,6 +172,43 @@ export default function DatenschutzPage() {
           eingesetzt werden, erfolgt dies nur anonymisiert und ausschliesslich
           zur Verbesserung der Benutzerfreundlichkeit.
         </p>
+        <br />
+        <section>
+          <h2 className="text-lg font-semibold text-foreground">Google Maps</h2>
+          <p>
+            Unsere Website verwendet zur Darstellung unseres Einsatzgebiets
+            einen Kartenausschnitt von <strong>Google Maps</strong>, einem
+            Dienst der Google LLC (USA). Beim Aufruf der Karte werden
+            automatisch personenbezogene Daten wie Ihre IP-Adresse,
+            Geräteinformationen sowie Nutzungsdaten an Google übertragen. Google
+            kann diese Daten mit anderen Diensten kombinieren und
+            Nutzungsprofile erstellen.
+          </p>
+          <p>
+            Die Daten können auch in die USA übertragen werden. Dort besteht
+            kein dem schweizerischen Datenschutz gleichwertiges Schutzniveau.
+            Google nutzt Standardvertragsklauseln, um ein angemessenes
+            Schutzniveau zu gewährleisten.
+          </p>
+          <p>
+            Rechtsgrundlage für die Datenverarbeitung ist Ihre Einwilligung oder
+            unser berechtigtes Interesse gemäss DSG und DSGVO Art. 6 Abs. 1 lit.
+            f, die Karte auf unserer Website darzustellen.
+          </p>
+          <p>
+            Weitere Informationen finden Sie in der Datenschutzerklärung von
+            Google:
+            <br />
+            <a
+              href="https://policies.google.com/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary underline underline-offset-2"
+            >
+              https://policies.google.com/privacy
+            </a>
+          </p>
+        </section>
       </section>
 
       <hr className="my-8 border-border" />

@@ -19,8 +19,8 @@ export function AktuelleStellenSection() {
           Aktuell suchen wir
         </h2>
         <p className="max-w-2xl mx-auto text-muted-foreground">
-          Verstärke unser engagiertes Team und gestalte mit uns eine Pflege, die
-          bewegt.
+          Verstärke unser Team und gestalte mit uns die Pflege von morgen.
+          Spitex Vitalum – nah am Menschen, professionell und kompetent.
         </p>
       </div>
 

@@ -1,8 +1,8 @@
-import { Poppins } from 'next/font/google'
+import Footer from '@/components/Footer'
+import Header from '@/components/Header'
 import '@/styles/globals.css'
 import type { Metadata } from 'next'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import { Poppins } from 'next/font/google'
 
 const siteUrl = 'https://www.vitalum.ch'
 const siteName = 'Spitex Vitalum – Vertraut, Verbunden, Daheim'

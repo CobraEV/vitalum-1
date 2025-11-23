@@ -25,7 +25,7 @@ export default function ServicesSection() {
                   <h3 className="text-lg font-semibold leading-snug text-foreground group-hover:text-primary transition-colors">
                     {item.label}
                   </h3>
-                  <p className="mt-2 text-sm text-muted-foreground line-clamp-3">
+                  <p className="mt-2 text-sm text-muted-foreground">
                     {item.description}
                   </p>
                 </div>

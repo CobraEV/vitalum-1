@@ -202,6 +202,9 @@ export default function Footer() {
             <Link className="hover:text-primary" href="/datenschutz">
               Datenschutz
             </Link>
+            <Link className="hover:text-primary" href="/agb">
+              AGB
+            </Link>
           </div>
         </div>
       </div>

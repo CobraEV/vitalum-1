@@ -47,7 +47,7 @@ export default function KontaktPage() {
                 {
                   icon: <ClockIcon className="h-5 w-5 text-primary" />,
                   label: 'Öffnungszeiten',
-                  value: 'Montag-Freitag: 08:00 - 12:00, 13:00 - 17:00',
+                  value: 'Montag-Freitag: 08:00 - 12:00, 13:00 - 16:00',
                   href: 'https://maps.google.com/?q=Postweg+18,+8754+Netstal',
                 },
               ].map((item, i) => (

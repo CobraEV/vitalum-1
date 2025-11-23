@@ -54,7 +54,7 @@ export const leistungen: Leistung[] = [
     list: [
       {
         title: 'Körperpflege',
-        desc: 'Unterstützung bei der individuellen Körperpflege wie z. B Dusche, Ganzkörper- oder Teilwäsche im Bett oder Lavabo, Mund- und Zahnpflege, Zahnprothesenpflege, Hand- und Zehennägel schneiden.',
+        desc: 'Unterstützung bei der individuellen Körperpflege wie z. B Dusche, Ganzkörper- oder Teilwäsche im Bett oder Lavabo, Mund- und Zahnpflege, Zahnprothesenpflege, Fuss- und Zehennägel schneiden.',
       },
       {
         title: 'Essen & Trinken',
@@ -102,7 +102,7 @@ export const leistungen: Leistung[] = [
       },
       {
         title: 'Stomapflege',
-        desc: 'Pflege und Überwachung bei künstlichem Darmausgang.',
+        desc: 'Reinigung, Hautpflege sowie Wechsel und Anpassung der Stomaversorgung. Unterstützung bei Undichtigkeiten oder Hautreizungen.',
       },
       { title: 'Blutzucker & Insulin', desc: 'Messung und Insulintherapie.' },
       {
@@ -111,14 +111,20 @@ export const leistungen: Leistung[] = [
       },
       {
         title: 'Katheterpflege',
-        desc: 'Betreuung und Hygiene bei Blasenkathetern.',
+        desc: 'Reinigung und Kontrolle des Katheters, den Wechsel von Beuteln und Schläuchen, die Überwachung auf mögliche Komplikationen.',
       },
       {
         title: 'Injektionen & Infusionen',
-        desc: 'Subkutane oder intravenöse Therapien.',
+        desc: 'intramuskuläre Injektionen und Infusion Therapien.',
       },
-      { title: 'Ernährung', desc: 'Enterale und parenterale Ernährung.' },
-      { title: 'Atemtherapie', desc: 'Inhalations- und Sauerstofftherapie.' },
+      {
+        title: 'Ernährung',
+        desc: 'Enterale Ernährung über die Magen- oder PEG-Sonde. Parenterale Ernährung direkt über den venösen oder zentralen Zugang.',
+      },
+      {
+        title: 'Atemtherapie',
+        desc: 'Nichtinvasive Atmungsunterstützung (NIV)',
+      },
       {
         title: 'Beratung & Krisenbegleitung',
         desc: 'Unterstützung und Instruktion für Klientinnen, Klienten und Angehörige.',
@@ -153,7 +159,7 @@ export const leistungen: Leistung[] = [
         desc: 'Möglichkeiten zur finanziellen Entschädigung.',
       },
       {
-        title: 'Sozialversicherungsschutz',
+        title: 'Sozialversicherungsangelegenheiten',
         desc: 'Beratung zu Vorsorge- und Versicherungslösungen.',
       },
     ],

@@ -54,7 +54,7 @@ export const leistungen: Leistung[] = [
     list: [
       {
         title: 'Körperpflege',
-        desc: 'Unterstützung bei der individuellen Körperpflege wie z. B Dusche, Ganzkörper- oder Teilwäsche im Bett oder Lavabo, Mund- und Zahnpflege, Zahnprothesenpflege, Fuss- und Zehennägel schneiden.',
+        desc: 'Hand- und Zehennägel schneiden.',
       },
       {
         title: 'Essen & Trinken',

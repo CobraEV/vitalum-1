@@ -12,15 +12,8 @@ export default function JobsPage() {
 
         <div className="max-w-3xl mx-auto space-y-4 text-muted-foreground leading-relaxed">
           <p>
-            Bei Spitex Vitalum verbinden wir Fachwissen mit Menschlichkeit.
-            Unser Ziel ist es, Menschen in ihrem Zuhause Sicherheit, Würde und
-            Lebensfreude zu schenken – Tag für Tag.
-          </p>
-          <p>
-            Wenn du Freude daran hast, Verantwortung zu übernehmen, selbständig
-            zu arbeiten und ein starkes Team an deiner Seite schätzt, dann bist
-            du bei uns genau richtig. Werde Teil von Spitex Vitalum und gestalte
-            mit uns eine Pflege, die bewegt.
+            Verstärke unser Team und gestalte mit uns die Pflege von morgen.
+            Spitex Vitalum – nah am Menschen, professionell und kompetent
           </p>
         </div>
       </section>

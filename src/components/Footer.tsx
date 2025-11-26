@@ -77,7 +77,7 @@ export default function Footer() {
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Link
-                      href="https://www.instagram.com/spitexvitalum"
+                      href="https://www.instagram.com/spitex.vitalum"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground hover:bg-primary hover:text-white transition-colors"
@@ -93,7 +93,7 @@ export default function Footer() {
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Link
-                      href="https://www.linkedin.com/company/spitex-vitalum"
+                      href="http://www.linkedin.com/in/spitex-vitalum-aa973a39a"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground hover:bg-primary hover:text-white transition-colors"
@@ -108,7 +108,7 @@ export default function Footer() {
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Link
-                      href="https://www.facebook.com/spitexvitalum"
+                      href="https://www.facebook.com/people/Spitex-Vitalum/61584366262808/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground hover:bg-primary hover:text-white transition-colors"
@@ -120,11 +120,11 @@ export default function Footer() {
                   <TooltipContent side="top">Facebook</TooltipContent>
                 </Tooltip>
 
-                {/* LinkedIn */}
+                {/* TikTok */}
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Link
-                      href="https://www.tiktok.com/spitex-vitalum"
+                      href="https://www.tiktok.com/@spitex.vitalum"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground hover:bg-primary hover:text-white transition-colors"

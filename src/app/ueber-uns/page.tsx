@@ -7,9 +7,10 @@ const TEAM_MEMBERS = [
   {
     name: 'Arzana Sabedini',
     role: 'CEO',
-    image: '/team/platzhalter-frau.png',
+    image: '/team/AZ.jpg',
     phone: '+41 55 511 93 93',
     email: 'arzana.sabedini@spitex-vitalum.ch',
+    position: 'top center',
   },
   {
     name: 'Lumnije Jaiji',
@@ -17,6 +18,7 @@ const TEAM_MEMBERS = [
     image: '/team/LJ.png',
     phone: '+41 55 511 93 93',
     email: 'lumnije.jaiji@spitex-vitalum.ch',
+    position: 'center center',
   },
 ]
 
@@ -96,7 +98,7 @@ export default function UeberUnsPage() {
                   src={member.image}
                   alt={member.name}
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="object-cover group-hover:scale-110 transition-transform duration-500 object-center"
                 />
               </div>
 

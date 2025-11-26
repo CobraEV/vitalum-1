@@ -49,7 +49,7 @@ export default function UeberUnsPage() {
             Klienten und der Gesellschaft.
           </p>
 
-          <p className="text-sm text-muted-foreground italic">
+          <p className="text-xs text-muted-foreground italic">
             Vernetzt mit Ärzte Netstal AG, Akut Care, Care Solutions GmbH
           </p>
         </div>

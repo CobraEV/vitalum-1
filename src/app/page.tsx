@@ -1,6 +1,8 @@
 import Einsatzgebiet from '@/components/Einsatzgebiet'
 import Hero from '@/components/Hero'
 import ServicesSection from '@/components/ServicesSection'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const Page = () => {
   return (
@@ -44,6 +46,27 @@ const Page = () => {
           <ServicesSection />
         </div>
       </section>
+
+      <div className="bg-background border-t border-border">
+        <div className="container py-12 lg:py-16">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center tracking-tight">
+            Unsere Partner
+          </h2>
+
+          <div className="mt-8 flex items-center justify-center">
+            <Link href={'https://www.srk-glarus.ch'} target="_blank">
+              <Image
+                src="/logo-srk-glarus.svg"
+                height={200}
+                width={400}
+                alt="SRK Glarus"
+                className="h-16 sm:h-20 opacity-90 hover:opacity-100 transition"
+              />
+            </Link>
+          </div>
+        </div>
+      </div>
+
       <div className="bg-muted">
         <div className="container py-8 lg:py-12">
           <Einsatzgebiet />

@@ -208,6 +208,34 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      <section className="bg-secondary/10 py-5">
+        <div className="container flex flex-col sm:flex-row justify-between items-center gap-3">
+          <p className="text-xs text-muted-foreground text-center sm:text-left">
+            Website entwickelt von{' '}
+            <Link
+              href="https://edelbyte.ch"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="font-semibold">EdelByte</span>
+            </Link>
+          </p>
+
+          <Link
+            href="https://edelbyte.ch"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/EdelByte_Logo_Light_Rect.png"
+              alt="EdelByte"
+              width={150}
+              height={50}
+              className="h-7 w-auto"
+            />
+          </Link>
+        </div>
+      </section>
     </footer>
   )
 }

@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Impressum | Spitex Vitalum',
@@ -94,6 +96,12 @@ export default function ImpressumPage() {
 
       <hr className="my-8 border-border" />
 
+      <section className="text-sm text-muted-foreground">
+        <p>Letzte Aktualisierung: Oktober 2025</p>
+      </section>
+
+      <hr className="my-8 border-border" />
+
       <section className="space-y-1">
         <h2 className="text-lg font-semibold text-foreground">
           Haftungsausschluss
@@ -107,6 +115,46 @@ export default function ImpressumPage() {
       </section>
 
       <hr className="my-8 border-border" />
+
+      {/* ⭐ EdelByte Design & Development */}
+      <section className="space-y-3">
+        <h2 className="text-lg font-semibold text-foreground">
+          Technische Umsetzung & Design
+        </h2>
+
+        <div className="flex flex-col-reverse sm:flex-row items-center sm:items-center sm:justify-between gap-4 p-4 border border-border rounded-lg bg-muted/30">
+          {/* Text */}
+          <p className="text-sm text-muted-foreground max-w-md text-center sm:text-left">
+            Diese Website wurde technisch entwickelt und gestaltet von{' '}
+            <Link
+              href="https://edelbyte.ch"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary font-medium hover:underline"
+            >
+              EdelByte
+            </Link>
+            .
+          </p>
+
+          {/* Logo */}
+          <Link
+            href="https://edelbyte.ch"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/EdelByte_Logo_Light_Square.png"
+              alt="EdelByte Logo"
+              height={200}
+              width={500}
+              className="h-24 w-auto"
+            />
+          </Link>
+        </div>
+      </section>
+
+      <hr className="my-8" />
 
       <section className="text-sm text-muted-foreground">
         <p>Letzte Aktualisierung: Oktober 2025</p>

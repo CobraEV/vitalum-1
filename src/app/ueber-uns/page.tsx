@@ -15,7 +15,7 @@ const TEAM_MEMBERS = [
   {
     name: 'Lumnije Jaiji',
     role: 'CNO und Stv. CEO',
-    image: '/team/LJ.png',
+    image: '/team/LJ.jpg',
     phone: '+41 55 511 93 93',
     email: 'lumnije.jaiji@spitex-vitalum.ch',
     position: 'center center',

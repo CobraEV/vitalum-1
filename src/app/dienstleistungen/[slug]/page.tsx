@@ -4,8 +4,13 @@ import { leistungen } from '@/lib/leistungen'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 
-export default function Page({ params }: { params: { slug: string } }) {
-  const data = leistungen.find((item) => item.slug === params.slug)
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await params
+  const data = leistungen.find((item) => item.slug === slug)
   if (!data) return notFound()
 
   return (

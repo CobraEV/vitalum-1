@@ -4,7 +4,7 @@ import '@/styles/globals.css'
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 
-const siteUrl = 'https://www.vitalum.ch'
+const siteUrl = 'https:/spitex-vitalum.ch'
 const siteName = 'Spitex Vitalum – Vertraut, Verbunden, Daheim'
 const siteDescription =
   'Vitalum bietet professionelle Spitex- und Pflegeleistungen im Kanton St. Gallen. Individuell, zuverlässig und mit Herz – für mehr Lebensqualität zu Hause.'
@@ -28,9 +28,9 @@ export const metadata: Metadata = {
     'Hauswirtschaft',
     'Behandlungspflege',
   ],
-  authors: [{ name: 'Vitalum', url: siteUrl }],
-  creator: 'Vitalum',
-  publisher: 'Vitalum',
+  authors: [{ name: 'Spitex Vitalum', url: siteUrl }],
+  creator: 'Spitex Vitalum',
+  publisher: 'Spitex Vitalum',
   alternates: {
     canonical: siteUrl,
   },
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         url: ogImage,
         width: 1200,
         height: 630,
-        alt: 'Vitalum – Pflege mit Herz',
+        alt: 'Spitex Vitalum – Pflege mit Herz',
       },
     ],
   },
@@ -55,13 +55,22 @@ export const metadata: Metadata = {
     title: siteName,
     description: siteDescription,
     images: [ogImage],
-    creator: '@vitalum_ch', // optional: falls du später Twitter hast
+    creator: '@spitex_vitalum_ch', // optional: falls du später Twitter hast
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
   },
+
   category: 'Healthcare',
+  applicationName: siteName,
   icons: {
     icon: '/favicon-96x96.png',
     shortcut: '/favicon.ico',

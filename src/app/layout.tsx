@@ -3,7 +3,7 @@ import Header from '@/components/Header'
 import '@/styles/globals.css'
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const siteUrl = 'https:/spitex-vitalum.ch'
 const siteName = 'Spitex Vitalum – Vertraut, Verbunden, Daheim'
@@ -91,7 +91,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="de">
-      <GoogleTagManager gtmId="G-8541N0D00L" />
+      <GoogleAnalytics gaId="G-8541N0D00L" />
       <body
         className={`${poppins.className} antialiased min-h-svh flex flex-col`}
       >

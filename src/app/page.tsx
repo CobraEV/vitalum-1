@@ -60,7 +60,7 @@ const Page = () => {
               rel="noopener noreferrer"
               aria-label="ASPS"
             >
-              <Image src="/asps.png" height={150} width={200} alt="ASPS" />
+              <Image className="w-auto h-48" src="/asps.png" height={150} width={200} alt="ASPS" />
             </Link>
 
             {/* <Link
@@ -83,6 +83,7 @@ const Page = () => {
                 height={200}
                 width={400}
                 alt="SRK Glarus"
+                className="w-auto h-24"
               />
             </Link>
           </div>

@@ -48,7 +48,7 @@ const Page = () => {
       </section>
 
       <div className="bg-background border-t border-border">
-        <div className="container py-12 lg:py-16">
+        <div className="container py-12 lg:py-16 flex flex-col gap-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-center tracking-tight">
             Unsere Partner
           </h2>
@@ -60,10 +60,24 @@ const Page = () => {
               rel="noopener noreferrer"
               aria-label="ASPS"
             >
-              <Image src="/asps.png" height={200} width={200} alt="ASPS" />
+              <Image src="/asps.png" height={150} width={200} alt="ASPS" />
             </Link>
 
-            <Link href={'https://www.srk-glarus.ch'} target="_blank">
+            {/* <Link
+              href="https://www.opanspitex.ch"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="OPAN"
+            >
+              <Image src="/opan.png" height={150} width={200} alt="OPAN" />
+            </Link> */}
+
+            <Link
+              href="https://www.srk-glarus.ch"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="SRK Glarus"
+            >
               <Image
                 src="/logo-srk-glarus.svg"
                 height={200}

@@ -4,6 +4,7 @@ import '@/styles/globals.css'
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import { GoogleAnalytics } from '@next/third-parties/google'
+import CookieBanner from '@/components/CookieBanner'
 
 const siteUrl = 'https://spitex-vitalum.ch'
 const siteName = 'Spitex Vitalum – Vertraut, Verbunden, Daheim'
@@ -115,7 +116,10 @@ export default function RootLayout({
         className={`${poppins.className} antialiased min-h-svh flex flex-col`}
       >
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1">
+          {children}
+          <CookieBanner />
+        </main>
         <Footer />
       </body>
     </html>

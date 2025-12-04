@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import { GoogleAnalytics } from '@next/third-parties/google'
 
-const siteUrl = 'https:/spitex-vitalum.ch'
+const siteUrl = 'https://spitex-vitalum.ch'
 const siteName = 'Spitex Vitalum – Vertraut, Verbunden, Daheim'
 const siteDescription =
   'Vitalum bietet professionelle Spitex- und Pflegeleistungen im Kanton St. Gallen. Individuell, zuverlässig und mit Herz – für mehr Lebensqualität zu Hause.'
@@ -73,9 +73,28 @@ export const metadata: Metadata = {
   category: 'Healthcare',
   applicationName: siteName,
   icons: {
-    icon: '/favicon-96x96.png',
-    shortcut: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
+    icon: [
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: ['/favicon-32x32.png'],
+    other: [
+      {
+        rel: 'icon',
+        url: '/favicon-192x192.png',
+        sizes: '192x192',
+        type: 'image/png',
+      },
+      {
+        rel: 'icon',
+        url: '/favicon-512x512.png',
+        sizes: '512x512',
+        type: 'image/png',
+      },
+    ],
   },
   manifest: '/site.webmanifest',
 }

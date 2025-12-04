@@ -53,14 +53,22 @@ const Page = () => {
             Unsere Partner
           </h2>
 
-          <div className="mt-8 flex items-center justify-center">
+          <div className="mt-8 flex flex-col sm:flex-row gap-8 items-center justify-evenly">
+            <Link
+              href="https://www.spitex.ch"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="ASPS"
+            >
+              <Image src="/asps.png" height={200} width={200} alt="ASPS" />
+            </Link>
+
             <Link href={'https://www.srk-glarus.ch'} target="_blank">
               <Image
                 src="/logo-srk-glarus.svg"
                 height={200}
                 width={400}
                 alt="SRK Glarus"
-                className="h-16 sm:h-20 opacity-90 hover:opacity-100 transition"
               />
             </Link>
           </div>

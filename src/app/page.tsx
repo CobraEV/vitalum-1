@@ -53,14 +53,21 @@ const Page = () => {
             Unsere Partner
           </h2>
 
-          <div className="mt-8 flex flex-col sm:flex-row gap-8 items-center justify-evenly">
+          <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center m-auto text-center">
             <Link
               href="https://www.spitex.ch"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="ASPS"
             >
-              <Image className="w-auto h-48" src="/asps.png" height={150} width={200} alt="ASPS" />
+              <Image
+                className="m-auto text-center"
+                // className="w-auto h-48 object-contain"
+                src="/asps.png"
+                height={150}
+                width={200}
+                alt="ASPS"
+              />
             </Link>
 
             {/* <Link
@@ -79,11 +86,28 @@ const Page = () => {
               aria-label="SRK Glarus"
             >
               <Image
+                className="m-auto text-center"
                 src="/logo-srk-glarus.svg"
                 height={200}
                 width={400}
                 alt="SRK Glarus"
-                className="w-auto h-24"
+                // className="w-auto h-24 object-contain"
+              />
+            </Link>
+
+            <Link
+              href="https://www.aerztenetstal.ch"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ärzte Netstal AG"
+            >
+              <Image
+                className="m-auto text-center"
+                src="/aerztenetstal.png"
+                height={200}
+                width={400}
+                alt="Ärzte Netstal AG"
+                // className="w-auto h-24 object-contain"
               />
             </Link>
           </div>

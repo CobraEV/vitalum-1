@@ -1,8 +1,3 @@
-# -----------------------------------------------------------------------------
-# This Dockerfile.bun is specifically configured for projects using Bun
-# For npm/pnpm or yarn, refer to the Dockerfile instead
-# -----------------------------------------------------------------------------
-
 # Use Bun's official image
 FROM oven/bun:1-alpine AS base
 

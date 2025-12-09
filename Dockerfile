@@ -1,4 +1,3 @@
-# Use Bun's official image
 FROM oven/bun:1-alpine AS base
 
 WORKDIR /app

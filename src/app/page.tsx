@@ -53,7 +53,22 @@ const Page = () => {
             Unsere Partner
           </h2>
 
-          <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center m-auto text-center">
+          <div className="mt-8 grid grid-cols-2 lg:grid-cols-4 gap-8 items-center m-auto text-center">
+            <Link
+              href="https://www.opanspitex.ch"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="OPAN"
+            >
+              <Image
+                src="/opan.png"
+                height={150}
+                width={200}
+                alt="OPAN"
+                className="m-auto text-center"
+              />
+            </Link>
+
             <Link
               href="https://www.spitex.ch"
               target="_blank"
@@ -69,15 +84,6 @@ const Page = () => {
                 alt="ASPS"
               />
             </Link>
-
-            {/* <Link
-              href="https://www.opanspitex.ch"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="OPAN"
-            >
-              <Image src="/opan.png" height={150} width={200} alt="OPAN" />
-            </Link> */}
 
             <Link
               href="https://www.srk-glarus.ch"

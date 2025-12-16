@@ -5,6 +5,7 @@ import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import CookieBanner from '@/components/CookieBanner'
+import Script from 'next/script'
 
 const siteUrl = 'https://spitex-vitalum.ch'
 const siteName = 'Spitex Vitalum – Vertraut, Verbunden, Daheim'
@@ -121,6 +122,11 @@ export default function RootLayout({
           <CookieBanner />
         </main>
         <Footer />
+        <Script
+          defer
+          src="https://umami.edelbyte.ch/script.js"
+          data-website-id="67764d99-1bbe-4126-81bb-afdff84f1987"
+        />
       </body>
     </html>
   )

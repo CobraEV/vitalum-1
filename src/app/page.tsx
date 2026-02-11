@@ -1,5 +1,6 @@
 import Einsatzgebiet from '@/components/Einsatzgebiet'
 import Hero from '@/components/Hero'
+import HinContactSection from '@/components/HinContactSection'
 import LanguagesSection from '@/components/LanguagesSection'
 import ServicesSection from '@/components/ServicesSection'
 import Image from 'next/image'
@@ -49,6 +50,7 @@ const Page = () => {
       </section>
 
       <LanguagesSection />
+      <HinContactSection />
       <div className='container py-12 lg:py-16 flex flex-col gap-8'>
         <h2 className='text-2xl sm:text-3xl font-bold text-center tracking-tight'>
           Unsere Partner

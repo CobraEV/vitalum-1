@@ -1,6 +1,6 @@
 'use client'
 
-import { QRCodeSVG } from 'qrcode.react'
+import Image from 'next/image'
 import {
   Heart,
   Copy,
@@ -16,42 +16,7 @@ import Link from 'next/link'
 
 // Swiss QR code data (SPS-Standard)
 // Format: each field on a separate line, LF-separated
-const IBAN_PLAIN = 'CH8080808008042305621'
 const IBAN_FORMATTED = 'CH80 8080 8008 0423 0562 1'
-
-const swissQrPayload = [
-  'SPC', // 1  Header
-  '0200', // 2  Version
-  '1', // 3  Coding (UTF-8)
-  IBAN_PLAIN, // 4  IBAN
-  'K', // 5  Creditor address type (K = combined)
-  'Spitex Vitalum GmbH', // 6  Name
-  'Postweg 18', // 7  Address line 1
-  '8754 Netstal', // 8  Address line 2
-  '', // 9  Postal code (empty for K)
-  '', // 10 City (empty for K)
-  'CH', // 11 Country
-  '', // 12 Ultimate creditor type
-  '', // 13 Ultimate creditor name
-  '', // 14 Ultimate creditor addr 1
-  '', // 15 Ultimate creditor addr 2
-  '', // 16 Ultimate creditor postal
-  '', // 17 Ultimate creditor city
-  '', // 18 Ultimate creditor country
-  '', // 19 Amount (empty = open)
-  'CHF', // 20 Currency
-  '', // 21 Debtor type
-  '', // 22 Debtor name
-  '', // 23 Debtor addr 1
-  '', // 24 Debtor addr 2
-  '', // 25 Debtor postal
-  '', // 26 Debtor city
-  '', // 27 Debtor country
-  'NON', // 28 Reference type
-  '', // 29 Reference (empty for NON)
-  'Spende', // 30 Unstructured message
-  'EPD', // 31 Trailer
-].join('\n')
 
 export default function SpendenPage() {
   const [copied, setCopied] = useState(false)
@@ -210,7 +175,12 @@ export default function SpendenPage() {
             </p>
 
             <div className='rounded-xl border-2 border-primary/20 bg-white p-4 shadow-inner'>
-              <QRCodeSVG value={swissQrPayload} size={220} level='M' />
+              <Image
+                src='/Spende_QR.png'
+                alt='Swiss QR-Code für Spende'
+                width={220}
+                height={220}
+              />
             </div>
 
             <p className='text-xs text-center text-muted-foreground'>

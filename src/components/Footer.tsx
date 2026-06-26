@@ -193,7 +193,15 @@ export default function Footer() {
         <div className="mt-10 flex flex-col-reverse items-center justify-between gap-4 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row">
           <p>
             © {new Date().getFullYear()} Spitex Vitalum. Alle Rechte
-            vorbehalten.
+            vorbehalten.{' '}
+            <Link
+              className="hover:text-primary"
+              href="https://edelbyte.ch"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Realisiert von EdelByte
+            </Link>
           </p>
           <div className="flex items-center gap-4">
             <Link className="hover:text-primary" href="/impressum">
